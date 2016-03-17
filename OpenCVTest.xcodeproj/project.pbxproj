@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		3C5833131C99E5A7002C81C7 /* OpenCVTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenCVTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5833161C99E5A7002C81C7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3CC7A2DD1C9B2E4800BAEAF2 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Resources; path = OpenCVTest/Resources; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +44,7 @@
 			children = (
 				3C5833151C99E5A7002C81C7 /* OpenCVTest */,
 				3C5833141C99E5A7002C81C7 /* Products */,
+				3CC7A2DD1C9B2E4800BAEAF2 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
