@@ -11,6 +11,16 @@
 
 using namespace cv;
 
+Mat src, src_gray;
+Mat dst, detectedEdges;
+
+int edgeThresh = 1;
+int lowThreshold;
+const int max_lowThreshold = 100;
+int ratio = 3;
+int kernel_size = 3;
+std::string windowName = "Edge map";
+
 int main(int, char**)
 {
     std::string paintingName = "/Users/dannyg/Desktop/OpenCV/OpenCVTest/Resources/StarryNightRGB.jpg";
