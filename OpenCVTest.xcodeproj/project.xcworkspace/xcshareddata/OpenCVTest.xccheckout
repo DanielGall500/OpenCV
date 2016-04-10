@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>4FBE5B85-406A-4CF0-AF9C-0788C44E0D80</string>
 	<key>IDESourceControlProjectName</key>
-	<string>OpenCVTest</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>799D269FA8056EE6CCE1F438543726A966378C42</key>
 		<string>https://github.com/DannyGotTea/OpenCV.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>OpenCVTest.xcodeproj</string>
+	<string>OpenCVTest.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>799D269FA8056EE6CCE1F438543726A966378C42</key>
