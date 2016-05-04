@@ -51,10 +51,38 @@ int main(int argc, char** argv)
         
         if(!bSuccess) //if not success, break loop
         {
-            
+            cout << "Cannot read a frame from video stream" << endl;
+            break;
         }
+        
+        Mat imgHSV;
+        
+        cvtColor(imgOriginal, imgHSV, COLOR_BGR2HSV); //converts the captured frame from BGR to HSV
+        
+        Mat imgThresholded;
+        
+        inRange(imgHSV, Scalar(iLowH, iLowS, iLowV), Scalar(iHighH, iHighS, iHighV), imgThresholded);
+        
+        //morphological opening (remove small objects from the foreground)
+        erode(imgThresholded, imgThresholded, getStructuringElement(MORPH_ELLIPSE, Size(5,5)));
+        dilate(imgThresholded, imgThresholded, getStructuringElement(MORPH_ELLIPSE, Size(5,5)));
+        
+        //morhpological closing (fill small holes inthe foreground)
+        dilate(imgThresholded, imgThresholded, getStructuringElement(MORPH_ELLIPSE, Size(5,5)));
+        erode(imgThresholded, imgThresholded, getStructuringElement(MORPH_ELLIPSE, Size(5,5)));
+        
+        imshow("Thresholded Image", imgThresholded); // show the thresholded image
+        imshow("Original", imgOriginal); // show the original image
+        
+        if(waitKey(30) == 27) //wait for escape key
+        {
+            cout << "Escape key pressed by user" << endl;
+            break;
+        }
+        
     }
     
+    return 0;
     
 }
 
