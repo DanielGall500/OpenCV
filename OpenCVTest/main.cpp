@@ -84,7 +84,7 @@ int main(int, char**)
             center.x = rng.uniform(0, paintingImage.cols);
             center.y = rng.uniform(0, paintingImage.rows);
             
-            Mat pointChunk = points.rowRange(k*sampleCount/clusterCount,
+            Mat pointChunk = points.rowRange(k*samp]leCount/clusterCount,
                                              k == clusterCount?
                                              sampleCount : (k+1)*sampleCount/clusterCount);
             
